@@ -12,6 +12,7 @@
     <modules>
         <module>dao</module>
         <module>model</module>
+        <module>dao-api</module>
     </modules>
 
     <properties>
@@ -19,4 +20,21 @@
         <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.epam.brest</groupId>
+                <artifactId>model</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>com.epam.brest</groupId>
+                <artifactId>dao-api</artifactId>
+            </dependency>
+            <dependency>
+                <groupId>com.epam.brest</groupId>
+                <artifactId>dao</artifactId>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
 </project>
